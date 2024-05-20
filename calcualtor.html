@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compound Interest Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.16.2/xlsx.full.min.js"></script>
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <div class="calculator">
+            <h1>Compound Interest Calculator</h1>
+            <label for="principal">Principal Amount ($):</label>
+            <input type="text" id="principal" required>
+            
+            <label for="rate">Annual Interest Rate (%):</label>
+            <input type="text" id="rate" step="0.01" required>
+            
+            <label for="frequency">Compounding Frequency:</label>
+            <select id="frequency" required>
+                <option value="1">Annually</option>
+                <option value="2">Semi-Annually</option>
+                <option value="4">Quarterly</option>
+                <option value="12">Monthly</option>
+                <option value="365">Daily</option>
+                <option value="Continuous">Continuously</option>
+            </select>
+            
+            <label for="years">Number of Years:</label>
+            <input type="text" id="years" step="0.1" required>
+
+            <label for="contribution">Regular Contribution ($):</label>
+            <input type="text" id="contribution" required>
+            
+            <button id="calculateButton">Calculate</button>
+            <p id="result"></p>
+        </div>
+        <button id="exportButton" style="display: none;">Export to Excel</button>
+        <canvas id="interestChart"></canvas>
+        <table id="outputTable" style="display: none;">
+            <thead>
+                <tr>
+                    <th>Period</th>
+                    <th>Principal</th>
+                    <th>Contributions</th>
+                    <th>Interest</th>
+                    <th>Total Amount</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+        <a href="index.html" class="back-link">Back to Home</a>
+    </div>
+</body>
+</html>

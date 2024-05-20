@@ -216,6 +216,7 @@ function calculateMortgage() {
             interest: interestPayment,
             remainingBalance: remainingBalance
         });
+        
     }
 
     document.getElementById('mortgageResult').innerHTML = `

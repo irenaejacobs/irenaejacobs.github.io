@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mortgage Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.16.2/xlsx.full.min.js"></script>
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <div class="calculator">
+            <h1>Mortgage Calculator</h1>
+            <label for="homeValue">Home Value ($):</label>
+            <input type="text" id="homeValue" required>
+
+            <label for="downPayment">Down Payment (%):</label>
+            <input type="text" id="downPayment" required>
+
+            <label for="loanTerm">Loan Term (years):</label>
+            <input type="text" id="loanTerm" required>
+
+            <label for="interestRate">Interest Rate (%):</label>
+            <input type="text" id="interestRate" required>
+
+            <label for="startMonth">Start Month:</label>
+            <select id="startMonth" required>
+                <option value="1">January</option>
+                <option value="2">February</option>
+                <option value="3">March</option>
+                <option value="4">April</option>
+                <option value="5">May</option>
+                <option value="6">June</option>
+                <option value="7">July</option>
+                <option value="8">August</option>
+                <option value="9">September</option>
+                <option value="10">October</option>
+                <option value="11">November</option>
+                <option value="12">December</option>
+            </select>
+
+            <label for="startYear">Start Year:</label>
+            <input type="text" id="startYear" required>
+
+            <button id="calculateMortgageButton">Calculate</button>
+            <p id="mortgageResult"></p>
+        </div>
+        <button id="exportMortgageButton" style="display: none;">Export to Excel</button>
+        <table id="mortgageTable" style="display: none;">
+            <thead>
+                <tr>
+                    <th>Period</th>
+                    <th>Payment</th>
+                    <th>Principal</th>
+                    <th>Interest</th>
+                    <th>Remaining Balance</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+        <a href="index.html" class="back-link">Back to Home</a>
+    </div>
+</body>
+</html>
